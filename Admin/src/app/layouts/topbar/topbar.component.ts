@@ -7,6 +7,7 @@ import { environment } from '../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Options } from 'ng5-slider';
 
 @Component({
   selector: 'app-topbar',
@@ -24,6 +25,14 @@ export class TopbarComponent implements OnInit {
   flagvalue;
   countryName;
   valueset;
+
+  tickvalue = environment.delayTimer;
+  tickoptions: Options = {
+    floor: 0,
+    ceil: 120,
+    step: 5,
+    showTicks: false
+  };
 
   constructor(@Inject(DOCUMENT) private document: any, private router: Router, private authService: AuthenticationService,
               private authFackservice: AuthfakeauthenticationService,

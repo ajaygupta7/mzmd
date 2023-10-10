@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
+import { Options } from 'ng5-slider';
+import { environment } from 'src/environments/environment';
+import { LanguageService } from 'src/app/core/services/language.service';
 
 
 @Component({
@@ -14,20 +17,23 @@ export class MacroComponent implements OnInit {
   APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';
   APIAdvancePath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-advance';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public languageService: LanguageService) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Device' }, { label: 'My Zone', active: true }];
   }
 
   getCall(id) {
-    console.log(id);
-    // const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' }
-    let URL = this.APIBasicPath + '?id='+id;
-    this.http.get(URL, {responseType: 'text'}).subscribe(data => {
-      console.log("Success: ", data);
-      alert("Success: "+ data);
-    })
+    setTimeout(() => {
+      console.log("Delayed for "+this.languageService.delayTimer+" second.");
+      console.log(id);
+      // const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' }
+      let URL = this.APIBasicPath + '?id='+id;
+      this.http.get(URL, {responseType: 'text'}).subscribe(data => {
+        console.log("Success: ", data);
+        alert("Success: "+ data);
+      })
+    }, (this.languageService.delayTimer*1000));
   }
 
 
@@ -148,16 +154,19 @@ export class MacroComponent implements OnInit {
   }
 
   callWithParams(id, str1, int1?, bool1?) {
-    console.log(id, str1, int1, bool1);
-    let URL = '';
-    URL = this.APIAdvancePath + '?id=' + id;
-    URL+= str1 ? "&mzmdStr1="+str1 : '';
-    URL+= int1 ? "&mzmdInt1="+int1 : '';
-    URL+= bool1 ? "&mzmdBool1="+bool1 : '';
-
-    console.log('URL :', URL);
-    this.http.get(URL, {responseType: 'text'}).subscribe(data => {
-      console.log("Success: ", data);
-    })
+    setTimeout(() => {
+      console.log("Delayed for "+this.languageService.delayTimer+" second.");
+      console.log(id, str1, int1, bool1);
+      let URL = '';
+      URL = this.APIAdvancePath + '?id=' + id;
+      URL+= str1 ? "&mzmdStr1="+str1 : '';
+      URL+= int1 ? "&mzmdInt1="+int1 : '';
+      URL+= bool1 ? "&mzmdBool1="+bool1 : '';
+      
+      console.log('URL :', URL);
+      this.http.get(URL, {responseType: 'text'}).subscribe(data => {
+        console.log("Success: ", data);
+      })
+    }, (this.languageService.delayTimer*1000));
   }
 }
