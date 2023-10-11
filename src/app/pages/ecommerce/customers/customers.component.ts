@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { Customers } from './customers.model';
@@ -19,7 +19,7 @@ export class CustomersComponent implements OnInit {
 
   // bread crumb items
   breadCrumbItems: Array<{}>;
-  formData: FormGroup;
+  formData: UntypedFormGroup;
   submitted = false;
   customersData: Customers[];
 
@@ -28,7 +28,7 @@ export class CustomersComponent implements OnInit {
   // page
   currentpage: number;
 
-  constructor(private modalService: NgbModal, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Ecommerce' }, { label: 'Customers', active: true }];

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { CalendarOptions, EventClickArg, EventApi } from '@fullcalendar/angular';
@@ -20,14 +20,14 @@ export class CalendarComponent implements OnInit {
   @ViewChild('modalShow') modalShow: TemplateRef<any>;
   @ViewChild('editmodalShow') editmodalShow: TemplateRef<any>;
 
-  formEditData: FormGroup;
+  formEditData: UntypedFormGroup;
   submitted = false;
   category: any[];
   newEventDate: any;
   editEvent: any;
   calendarEvents: any[];
   // event form
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   calendarOptions: CalendarOptions = {
     headerToolbar: {
@@ -92,7 +92,7 @@ export class CalendarComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {}
 
   get form() {

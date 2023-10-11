@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 
 import { ChatUser, ChatMessage } from './chat.model';
 
@@ -23,14 +23,14 @@ export class ChatComponent implements OnInit, AfterViewInit {
   chatData: ChatUser[];
   chatMessagesData: ChatMessage[];
 
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   // Form submit
   chatSubmit: boolean;
 
   usermessage: string;
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: UntypedFormBuilder) {
   }
 
   ngOnInit() {

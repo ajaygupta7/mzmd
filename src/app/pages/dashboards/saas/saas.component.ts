@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 
 import { earningLineChart, salesAnalyticsDonutChart, ChatData } from './data';
 import { ChartType, ChatMessage } from './saas.model';
@@ -27,12 +27,12 @@ export class SaasComponent implements OnInit, AfterViewInit {
   sassEarning: Array<Object>;
   sassTopSelling: Array<Object>;
 
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   // Form submit
   chatSubmit: boolean;
 
-  constructor(public formBuilder: FormBuilder, private configService: ConfigService) { }
+  constructor(public formBuilder: UntypedFormBuilder, private configService: ConfigService) { }
 
   /**
    * Returns form

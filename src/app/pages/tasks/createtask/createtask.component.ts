@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, EventEmitter, Output, Input } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormArray, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
@@ -20,9 +20,9 @@ export class CreatetaskComponent implements OnInit {
 
   public Editor = ClassicEditor;
 
-  form = new FormGroup({
-    member: new FormArray([
-      new FormControl(''),
+  form = new UntypedFormGroup({
+    member: new UntypedFormArray([
+      new UntypedFormControl(''),
     ]),
   });
 
@@ -41,13 +41,13 @@ export class CreatetaskComponent implements OnInit {
   /**
    * Returns the form field value
    */
-  get member(): FormArray { return this.form.get('member') as FormArray; }
+  get member(): UntypedFormArray { return this.form.get('member') as UntypedFormArray; }
 
   /**
    * Add the member field in form
    */
   addMember() {
-    this.member.push(new FormControl());
+    this.member.push(new UntypedFormControl());
   }
 
   /**

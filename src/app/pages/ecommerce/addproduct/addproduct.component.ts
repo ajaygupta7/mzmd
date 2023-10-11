@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
@@ -15,7 +15,7 @@ import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
  */
 export class AddproductComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(public formBuilder: UntypedFormBuilder, private http: HttpClient) { }
   /**
    * Returns form
    */
@@ -23,7 +23,7 @@ export class AddproductComponent implements OnInit {
     return this.productForm.controls;
   }
 
-  productForm: FormGroup;
+  productForm: UntypedFormGroup;
 
   // bread crumb items
   breadCrumbItems: Array<{}>;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, UntypedFormControl, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { taskChart, tasks } from './data';
@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
   breadCrumbItems: Array<{}>;
 
   submitted = false;
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   taskChart: ChartType;
 
@@ -30,14 +30,14 @@ export class ListComponent implements OnInit {
   completedTasks: Tasklist[];
   myFiles = [];
 
-  constructor(private modalService: NgbModal, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Tasks' }, { label: 'Task List', active: true }];
 
     this.formData = this.formBuilder.group({
       name: ['', [Validators.required]],
-      file: new FormControl('', [Validators.required]),
+      file: new UntypedFormControl('', [Validators.required]),
       taskType: ['', [Validators.required]],
       status: ['', [Validators.required]]
     });
