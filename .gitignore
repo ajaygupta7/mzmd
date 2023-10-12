@@ -9,8 +9,10 @@
 
 # dependencies
 /node_modules
+/node_modules2
 /.angular/cache
 /package-lock.json
+/package-lock2.json
 
 # profiling files
 chrome-profiler-events*.json
