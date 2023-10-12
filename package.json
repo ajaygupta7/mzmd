@@ -13,16 +13,16 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.1.0",
-    "@angular/animations": "^13.0.2",
-    "@angular/common": "~13.0.2",
-    "@angular/compiler": "~13.0.2",
-    "@angular/core": "~13.0.2",
-    "@angular/fire": "^6.1.5",
-    "@angular/forms": "~13.0.2",
-    "@angular/localize": "^13.0.2",
-    "@angular/platform-browser": "~13.0.2",
-    "@angular/platform-browser-dynamic": "~13.0.2",
-    "@angular/router": "~13.0.2",
+    "@angular/animations": "^14.3.0",
+    "@angular/common": "~14.3.0",
+    "@angular/compiler": "~14.3.0",
+    "@angular/core": "~14.3.0",
+    "@angular/fire": "^7.6.1",
+    "@angular/forms": "~14.3.0",
+    "@angular/localize": "^14.3.0",
+    "@angular/platform-browser": "~14.3.0",
+    "@angular/platform-browser-dynamic": "~14.3.0",
+    "@angular/router": "~14.3.0",
     "@ckeditor/ckeditor5-angular": "^2.0.1",
     "@ckeditor/ckeditor5-build-classic": "^40.0.0",
     "@fullcalendar/angular": "^5.8.0",
@@ -80,8 +80,8 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.6",
     "@angular/cli": "^16.2.6",
-    "@angular/compiler-cli": "~13.0.2",
-    "@angular/language-service": "~13.0.2",
+    "@angular/compiler-cli": "~14.3.0",
+    "@angular/language-service": "~14.3.0",
     "@juggle/resize-observer": "^3.3.1",
     "@types/echarts": "^4.9.8",
     "@types/jasmine": "~3.6.0",
@@ -97,6 +97,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "^7.0.0",
     "ts-node": "~7.0.0",
-    "typescript": "~4.4.4"
+    "typescript": "~4.8.4"
   }
 }
