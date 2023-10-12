@@ -13,16 +13,16 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.1.0",
-    "@angular/animations": "^16.2.9",
-    "@angular/common": "^16.2.9",
-    "@angular/compiler": "^16.2.9",
-    "@angular/core": "^16.2.9",
+    "@angular/animations": "^13.0.2",
+    "@angular/common": "~13.0.2",
+    "@angular/compiler": "~13.0.2",
+    "@angular/core": "~13.0.2",
     "@angular/fire": "^6.1.5",
-    "@angular/forms": "^16.2.9",
-    "@angular/localize": "^16.2.9",
-    "@angular/platform-browser": "^16.2.9",
-    "@angular/platform-browser-dynamic": "^16.2.9",
-    "@angular/router": "^16.2.9",
+    "@angular/forms": "~13.0.2",
+    "@angular/localize": "^13.0.2",
+    "@angular/platform-browser": "~13.0.2",
+    "@angular/platform-browser-dynamic": "~13.0.2",
+    "@angular/router": "~13.0.2",
     "@ckeditor/ckeditor5-angular": "^2.0.1",
     "@ckeditor/ckeditor5-build-classic": "^40.0.0",
     "@fullcalendar/angular": "^5.8.0",
@@ -75,19 +75,19 @@
     "simplebar-angular": "^2.3.4",
     "sweetalert2": "^11.0.18",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.3"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.6",
     "@angular/cli": "^16.2.6",
-    "@angular/compiler-cli": "^16.2.9",
-    "@angular/language-service": "^16.2.9",
+    "@angular/compiler-cli": "~13.0.2",
+    "@angular/language-service": "~13.0.2",
     "@juggle/resize-observer": "^3.3.1",
     "@types/echarts": "^4.9.8",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^15.12.4",
-    "codelyzer": "^0.0.28",
+    "codelyzer": "^6.0.2",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.2",
@@ -97,6 +97,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "^7.0.0",
     "ts-node": "~7.0.0",
-    "typescript": "~5.1.6"
+    "typescript": "~4.4.4"
   }
 }
