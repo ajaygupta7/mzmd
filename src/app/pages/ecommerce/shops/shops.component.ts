@@ -16,7 +16,7 @@ import { Shops } from './shops.model';
 export class ShopsComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   shopsData: Shops[];
 

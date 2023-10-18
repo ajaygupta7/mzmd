@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
  */
 export class UploadsComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

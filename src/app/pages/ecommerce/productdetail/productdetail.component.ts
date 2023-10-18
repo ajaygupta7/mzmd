@@ -13,7 +13,7 @@ import { productModel, productList } from '../product.model';
  */
 export class ProductdetailComponent implements OnInit {
 
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   public productDetail: productModel[];
 
   isImage;

@@ -1,36 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
-
-import { environment } from '../environments/environment';
-
-import { NgbNavModule, NgbAccordionModule, NgbTooltipModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-
-import { SharedModule } from './cyptolanding/shared/shared.module';
-
-import { ExtrapagesModule } from './extrapages/extrapages.module';
-
-import { LayoutsModule } from './layouts/layouts.module';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { initFirebaseBackend } from './authUtils';
-import { CyptolandingComponent } from './cyptolanding/cyptolanding.component';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { ErrorInterceptor } from './core/helpers/error.interceptor';
-import { JwtInterceptor } from './core/helpers/jwt.interceptor';
-import { FakeBackendInterceptor } from './core/helpers/fake-backend';
-
-if (environment.defaultauth === 'firebase') {
-  initFirebaseBackend(environment.firebaseConfig);
-} else {
-  // tslint:disable-next-line: no-unused-expression
-  FakeBackendInterceptor;
-}
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ExtrapagesModule } from './extrapages/extrapages.module';
+import { LayoutsModule } from './layouts/layouts.module';
+// import { ExtrapagesModule } from './extrapages/extrapages.module';
+// import { LayoutsModule } from './layouts/layouts.module';
+import { PagesModule } from './pages/pages.module';
+import { TestingComponent } from './testing/testing.component';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -39,12 +22,14 @@ export function createTranslateLoader(http: HttpClient): any {
 @NgModule({
   declarations: [
     AppComponent,
-    CyptolandingComponent,
+    TestingComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    AppRoutingModule,
+    NgbModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -53,23 +38,10 @@ export function createTranslateLoader(http: HttpClient): any {
       }
     }),
     LayoutsModule,
-    AppRoutingModule,
     ExtrapagesModule,
-    CarouselModule,
-    NgbAccordionModule,
-    NgbNavModule,
-    NgbTooltipModule,
-    SharedModule,
-    ScrollToModule.forRoot(),
-    NgbModule
+    PagesModule
   ],
-  bootstrap: [AppComponent],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
-    // LoaderService,
-    // { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true },
-  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

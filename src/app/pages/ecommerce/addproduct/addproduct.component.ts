@@ -26,7 +26,7 @@ export class AddproductComponent implements OnInit {
   productForm: UntypedFormGroup;
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   // Form submition
   submit: boolean;
 

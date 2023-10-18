@@ -11,7 +11,7 @@ import { priceCandlestickChart, notificationData } from './data';
 })
 export class ExchangeComponent implements OnInit {
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   priceCandlestickChart: ChartType;
 

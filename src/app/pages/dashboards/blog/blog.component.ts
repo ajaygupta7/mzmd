@@ -21,7 +21,7 @@ export class BlogComponent implements OnInit {
   popularPostData;
   public activeOptionButton = "all";
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

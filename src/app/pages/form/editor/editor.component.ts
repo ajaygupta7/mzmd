@@ -14,7 +14,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export class EditorComponent implements OnInit {
 
  // bread crumb items
- breadCrumbItems: Array<{}>;
+ breadCrumbItems!: Array<{}>;
 
  public Editor = ClassicEditor;
 

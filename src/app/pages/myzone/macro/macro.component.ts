@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
-import { Options } from 'ng5-slider';
-import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/core/services/language.service';
 
 
@@ -13,7 +11,7 @@ import { LanguageService } from 'src/app/core/services/language.service';
 })
 export class MacroComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';
   APIAdvancePath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-advance';
 
@@ -23,7 +21,7 @@ export class MacroComponent implements OnInit {
     this.breadCrumbItems = [{ label: 'Device' }, { label: 'My Zone', active: true }];
   }
 
-  getCall(id) {
+  getCall(id: string) {
     setTimeout(() => {
       console.log("Delayed for "+this.languageService.delayTimer+" second.");
       console.log(id);
@@ -40,7 +38,7 @@ export class MacroComponent implements OnInit {
   // Advanced Settings
 
   // Dropdown Selectors
-  async dropdownSwal(id) {
+  async dropdownSwal(id: string) {
     const ipAPI = '//api.ipify.org?format=json'
     const inputValue = fetch(ipAPI)
       .then(response => response.json())
@@ -72,7 +70,7 @@ export class MacroComponent implements OnInit {
   }
 
   // Range Slider
-  async rangeSwal(id) {
+  async rangeSwal(id: string) {
     const ipAPI = '//api.ipify.org?format=json'
     const inputValue = fetch(ipAPI)
       .then(response => response.json())
@@ -96,7 +94,7 @@ export class MacroComponent implements OnInit {
     }
   }
 
-  async text2XSwal(id) {
+  async text2XSwal(id: any) {
     const ipAPI = '//api.ipify.org?format=json'
     const inputValue = fetch(ipAPI)
       .then(response => response.json())
@@ -129,7 +127,7 @@ export class MacroComponent implements OnInit {
     }
   }
 
-  async textSwal(id) {
+  async textSwal(id: any) {
     const ipAPI = '//api.ipify.org?format=json'
     const inputValue = fetch(ipAPI)
       .then(response => response.json())
@@ -153,7 +151,7 @@ export class MacroComponent implements OnInit {
     }
   }
 
-  callWithParams(id, str1, int1?, bool1?) {
+  callWithParams(id: string, str1: string, int1?: string | number | undefined, bool1?: string | undefined) {
     setTimeout(() => {
       console.log("Delayed for "+this.languageService.delayTimer+" second.");
       console.log(id, str1, int1, bool1);

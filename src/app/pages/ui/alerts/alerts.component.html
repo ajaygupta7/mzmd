@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
   <!-- start page title -->
-  <app-page-title title="Alerts" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+  <!-- <app-page-title title="Alerts" [breadcrumbItems]="breadCrumbItems"></app-page-title> -->
   <!-- end page title -->
 
   <div class="row">
@@ -14,7 +14,7 @@
             text, as well as an optional dismiss button. For proper styling, use one
             of the four <strong>required</strong> contextual type (e.g., <code
               class="highlighter-rouge">success</code>).</p>
-          <div>
+          <!-- <div>
             <ngb-alert [dismissible]="false" type="primary">
               A simple primary alert—check it out!
             </ngb-alert>
@@ -33,7 +33,7 @@
             <ngb-alert [dismissible]="false" type="info">
               A simple info alert—check it out!
             </ngb-alert>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
           <p class="card-title-desc">Use the <code class="highlighter-rouge">.alert-link</code> utility class to
             quickly provide matching colored links within any alert.</p>
 
-          <div class="">
+          <!-- <div class="">
             <ngb-alert [dismissible]="false" type="primary">
               A simple primary alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it
               a click if you
@@ -77,7 +77,7 @@
               A simple info alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a
               click if you like.
             </ngb-alert>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -98,9 +98,9 @@
           </p>
 
           <div *ngFor="let color of alertData">
-            <ngb-alert type="{{color.color}}" (close)="close(color, alertData)" class="custom-alert">
+            <!-- <ngb-alert type="{{color.color}}" (close)="close(color, alertData)" class="custom-alert">
               A simple {{color.color}} alert—check it out!
-            </ngb-alert>
+            </ngb-alert> -->
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
       <div class="card">
           <div class="card-body">
               <h4 class="card-title mb-4">With Icon</h4>
-              <div class="custom-alert">
+              <!-- <div class="custom-alert">
                   <ngb-alert type="primary" role="alert">
                       <i class="mdi mdi-bullseye-arrow me-2"></i>
                       A simple primary alert—check it out!
@@ -136,7 +136,7 @@
                       <i class="mdi mdi-alert-circle-outline me-2"></i>
                       A simple info alert—check it out!
                   </ngb-alert>
-              </div>
+              </div> -->
           </div>
       </div>
   </div>
@@ -154,8 +154,8 @@
 
                 <div class="custom-alert">
                     <div id="liveAlertPlaceholder"></div>
-                    <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">{{ successMessage }}
-                    </ngb-alert>
+                    <!-- <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">{{ successMessage }}
+                    </ngb-alert> -->
                     <button type="button" class="btn btn-primary" id="liveAlertBtn" (click)="changeSuccessMessage()">Show live alert</button>
                 </div>
             </div>

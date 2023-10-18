@@ -16,7 +16,7 @@ export class CryptoComponent implements OnInit {
   @ViewChild("chart", { static: false }) chart: ChartComponent;
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   public activeOptionButton = "all";
 
   walletRadialChart: ChartType;

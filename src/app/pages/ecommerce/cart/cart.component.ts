@@ -16,7 +16,7 @@ import { cartData } from './data';
 export class CartComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   value: number;
 
   cartData: Cart[];

@@ -21,7 +21,7 @@ export class EmailreadComponent implements OnInit {
   public index: number;
   public Editor = ClassicEditor;
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   emailRead: Array<Email>;
 
   constructor(private route: ActivatedRoute, private modalService: NgbModal) {

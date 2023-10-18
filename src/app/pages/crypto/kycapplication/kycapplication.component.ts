@@ -8,7 +8,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class KycapplicationComponent implements OnInit {
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor(private modalService: NgbModal) { }
 

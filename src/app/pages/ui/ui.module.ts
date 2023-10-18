@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { UIModule } from '../../shared/ui/ui.module';
+// import { UIModule } from '../../shared/ui/ui.module';
 import {
   NgbAlertModule, NgbCarouselModule, NgbDropdownModule, NgbModalModule, NgbProgressbarModule,
   NgbTooltipModule, NgbPopoverModule, NgbPaginationModule, NgbNavModule, NgbAccordionModule,
-  NgbCollapseModule
+  NgbCollapseModule,
+  NgbModal,
+  NgbModule
 } from '@ng-bootstrap/ng-bootstrap';
-import { Ng5SliderModule } from 'ng5-slider';
+// import { Ng5SliderModule } from 'ng5-slider';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { UiRoutingModule } from './ui-routing.module';
@@ -39,10 +42,12 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
   declarations: [AlertsComponent, ButtonsComponent, CardsComponent, CarouselComponent, DropdownsComponent, GridComponent, ImagesComponent, ModalsComponent, ProgressbarComponent, TypographyComponent, GeneralComponent, ColorsComponent, VideoComponent, TabsComponent, SweetalertComponent, RangesliderComponent, ImagecropperComponent, LightboxComponent, PlaceholderComponent],
   imports: [
     CommonModule,
+    NgbModule,
     UiRoutingModule,
-    UIModule,
+    // UIModule,
     FormsModule,
-    Ng5SliderModule,
+    // Ng5SliderModule,
+    NgxSliderModule,
     NgbAlertModule,
     NgbCarouselModule,
     NgbDropdownModule,

@@ -22,7 +22,7 @@ import { AdvancedSortableDirective, SortEvent } from './advanced-sortable.direct
  */
 export class AdvancedtableComponent implements OnInit {
   // bread crum data
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   // Table data
   tableData: Table[];
   public selected: any;

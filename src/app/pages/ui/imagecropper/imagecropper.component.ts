@@ -17,7 +17,7 @@ export class ImagecropperComponent implements OnInit {
   constructor() { }
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   transform: ImageTransform = {};
 
@@ -27,7 +27,8 @@ export class ImagecropperComponent implements OnInit {
   rotation = 0;
   scale = 1;
 
-  @ViewChild(ImageCropperComponent, { static: true }) imageCropper: ImageCropperComponent;
+  @ViewChild(ImageCropperComponent, { static: true })
+  imageCropper!: ImageCropperComponent;
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'UI' }, { label: 'Image Crop', active: true }];

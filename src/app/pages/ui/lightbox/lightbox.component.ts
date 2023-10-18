@@ -11,10 +11,10 @@ import { MapsAPILoader } from '@agm/core';
 export class LightboxComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
-  albums = [];
-  gallery = [];
-  images = [];
+  breadCrumbItems!: Array<{}>;
+  albums: any = [];
+  gallery: any = [];
+  images: any = [];
   id = 'JlvxDa7Sges';
 
   longitude = 20.728218;

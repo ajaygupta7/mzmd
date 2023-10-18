@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilemanagerComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   radialoptions;
   constructor() { }
   public isCollapsed = false;

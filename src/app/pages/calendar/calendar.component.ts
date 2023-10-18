@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 export class CalendarComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   @ViewChild('modalShow') modalShow: TemplateRef<any>;
   @ViewChild('editmodalShow') editmodalShow: TemplateRef<any>;

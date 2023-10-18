@@ -13,16 +13,16 @@ import { ConfigService } from '../../../core/services/config.service';
 })
 export class DefaultComponent implements OnInit {
 
-  isVisible: string;
+  isVisible!: any;
 
-  emailSentBarChart: ChartType;
-  monthlyEarningChart: ChartType;
-  transactions: Array<[]>;
-  statData: Array<[]>;
+  emailSentBarChart!: ChartType;
+  monthlyEarningChart!: ChartType;
+  transactions!: Array<[]>;
+  statData!: Array<[]>;
 
-  isActive: string;
+  isActive!: string;
 
-  @ViewChild('content') content;
+  @ViewChild('content') content: any;
   constructor(private modalService: NgbModal, private configService: ConfigService, private eventService: EventService) {
   }
 

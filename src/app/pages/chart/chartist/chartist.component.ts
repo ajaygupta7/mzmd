@@ -22,7 +22,7 @@ export class ChartistComponent implements OnInit {
   constructor() { }
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   // Simple line chart
   simpleLineChart: ChartType;

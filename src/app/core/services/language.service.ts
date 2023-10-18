@@ -8,7 +8,7 @@ export class LanguageService {
   delayTimer: number = 0;
 
   constructor(public translate: TranslateService, private cookieService: CookieService) {
-    let browserLang;
+    let browserLang: any;
     this.translate.addLangs(this.languages);
     if (this.cookieService.check('lang')) {
       browserLang = this.cookieService.get('lang');
@@ -20,7 +20,7 @@ export class LanguageService {
     translate.use(browserLang.match(/en|es|de|it|ru/) ? browserLang : 'en');
   }
 
-  public setLanguage(lang) {
+  public setLanguage(lang: any) {
     this.translate.use(lang);
     this.cookieService.set('lang', lang);
   }

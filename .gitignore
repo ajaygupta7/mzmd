@@ -13,6 +13,7 @@
 /.angular/cache
 /package-lock.json
 /package-lock2.json
+/old_mzmd
 
 # profiling files
 chrome-profiler-events*.json

@@ -15,7 +15,7 @@ export class CreateComponent implements OnInit {
 
   constructor(private calendar: NgbCalendar) { }
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   hoveredDate: NgbDate;
   fromNGDate: NgbDate;

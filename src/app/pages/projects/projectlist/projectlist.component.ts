@@ -16,7 +16,7 @@ import { projectData } from '../projectdata';
 export class ProjectlistComponent implements OnInit {
 
  // bread crumb items
- breadCrumbItems: Array<{}>;
+ breadCrumbItems!: Array<{}>;
 
  projectData: Project[];
 

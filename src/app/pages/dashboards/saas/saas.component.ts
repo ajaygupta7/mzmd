@@ -15,22 +15,22 @@ import { ConfigService } from '../../../core/services/config.service';
  */
 export class SaasComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('scrollRef') scrollRef;
+  @ViewChild('scrollRef') scrollRef: { SimpleBar: { getScrollElement: () => { (): any; new(): any; scrollTop: number; scrollHeight: number; }; }; } | undefined;
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
-  earningLineChart: ChartType;
-  salesAnalyticsDonutChart: ChartType;
-  ChatData: ChatMessage[];
+  earningLineChart!: ChartType;
+  salesAnalyticsDonutChart!: ChartType;
+  ChatData: ChatMessage[] = [];
 
-  sassEarning: Array<Object>;
-  sassTopSelling: Array<Object>;
+  sassEarning: Array<Object> = [];
+  sassTopSelling: Array<Object> = [];
 
-  formData: UntypedFormGroup;
+  formData: any;
 
   // Form submit
-  chatSubmit: boolean;
+  chatSubmit: boolean = false;
 
   constructor(public formBuilder: UntypedFormBuilder, private configService: ConfigService) { }
 
@@ -50,7 +50,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
       message: ['', [Validators.required]],
     });
 
-    this.configService.getConfig().subscribe(response => {
+    this.configService.getConfig().subscribe((response: { sassEarning: Object[]; sassTopSelling: Object[]; }) => {
       this.sassEarning = response.sassEarning;
       this.sassTopSelling = response.sassTopSelling;
     
@@ -88,19 +88,20 @@ export class SaasComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    if (this.scrollRef !== undefined) 
     this.scrollRef.SimpleBar.getScrollElement().scrollTop = 500;
   }
 
   onListScroll() {
-    if (this.scrollRef !== undefined) {
-      setTimeout(() => {
+    setTimeout(() => {
+        if (this.scrollRef !== undefined) {
         this.scrollRef.SimpleBar.getScrollElement().scrollTop =
           this.scrollRef.SimpleBar.getScrollElement().scrollHeight + 1500;
+        }
       }, 500);
-    }
   }
 
-  selectMonth(value) {
+  selectMonth(value: any) {
     switch (value) {
       case "january":
         this.sassEarning = [
@@ -177,7 +178,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
     }
   }
 
-  sellingProduct(event) {
+  sellingProduct(event: any) {
     let month = event.target.value;
     switch (month) {
       case "january":

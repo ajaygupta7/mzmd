@@ -28,7 +28,7 @@ export class EchartComponent implements OnInit {
   gaugeChart: ChartType;
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Charts' }, { label: 'E - Chart', active: true }];

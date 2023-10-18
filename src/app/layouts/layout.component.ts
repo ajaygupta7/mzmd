@@ -15,9 +15,9 @@ import {
 export class LayoutComponent implements OnInit, AfterViewInit {
 
   // layout related config
-  layoutType: string;
-  layoutwidth: string;
-  topbar: string;
+  layoutType!: string;
+  layoutwidth!: string;
+  topbar!: string;
 
   constructor(private eventService: EventService) { }
 
@@ -60,6 +60,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         document.body.setAttribute("data-layout-scrollable", "true");
         document.body.setAttribute("data-layout-size", "fluid");
         document.body.classList.remove("right-bar-enabled", "vertical-collpsed");
+        break;
       default:
         document.body.setAttribute("data-layout-size", "fluid");
         break;

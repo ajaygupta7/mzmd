@@ -9,10 +9,10 @@ import { ChartType } from '../../saas.model';
 })
 export class SellingchartComponent implements OnInit {
 
-  @Input() Chartcolor;
-  @Input() value;
+  @Input() Chartcolor: any;
+  @Input() value: any;
 
-  chartData: ChartType;
+  chartData!: ChartType;
 
   constructor() { }
 

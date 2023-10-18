@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
  */
 export class CarouselComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   showNavigationArrows: any;
   showNavigationIndicators: any;
 

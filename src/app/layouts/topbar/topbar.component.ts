@@ -1,13 +1,13 @@
 import { Component, OnInit, Output, EventEmitter, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { AuthenticationService } from '../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
-import { environment } from '../../../environments/environment';
+// import { AuthenticationService } from '../../core/services/auth.service';
+// import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
+// import { environment } from '../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
-import { Options } from 'ng5-slider';
+import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
   selector: 'app-topbar',
@@ -20,13 +20,13 @@ import { Options } from 'ng5-slider';
  */
 export class TopbarComponent implements OnInit {
 
-  element;
-  cookieValue;
-  flagvalue;
-  countryName;
-  valueset;
+  element: any;
+  cookieValue!: string;
+  flagvalue: string | string[] | undefined;
+  countryName!: string | string[];
+  valueset!: string;
 
-  tickvalue = environment.delayTimer;
+  tickvalue = 0;
   tickoptions: Options = {
     floor: 0,
     ceil: 120,
@@ -34,8 +34,9 @@ export class TopbarComponent implements OnInit {
     showTicks: false
   };
 
-  constructor(@Inject(DOCUMENT) private document: any, private router: Router, private authService: AuthenticationService,
-              private authFackservice: AuthfakeauthenticationService,
+  constructor(@Inject(DOCUMENT) private document: any, private router: Router, 
+  // private authService: AuthenticationService,
+              // private authFackservice: AuthfakeauthenticationService,
               public languageService: LanguageService,
               public translate: TranslateService,
               public _cookiesService: CookieService) {
@@ -49,14 +50,14 @@ export class TopbarComponent implements OnInit {
     { text: 'Russian', flag: 'assets/images/flags/russia.jpg', lang: 'ru' },
   ];
 
-  openMobileMenu: boolean;
+  openMobileMenu!: boolean;
 
   @Output() settingsButtonClicked = new EventEmitter();
   @Output() mobileMenuButtonClicked = new EventEmitter();
 
   ngOnInit() {
     this.openMobileMenu = false;
-    this.element = document.documentElement;
+    this.element = document.documentElement as HTMLElement;
 
     this.cookieValue = this._cookiesService.get('lang');
     const val = this.listLang.filter(x => x.lang === this.cookieValue);
@@ -94,11 +95,11 @@ export class TopbarComponent implements OnInit {
    * Logout the user
    */
   logout() {
-    if (environment.defaultauth === 'firebase') {
-      this.authService.logout();
-    } else {
-      this.authFackservice.logout();
-    }
+    // if (environment.defaultauth === 'firebase') {
+    //   this.authService.logout();
+    // } else {
+    //   this.authFackservice.logout();
+    // }
     this.router.navigate(['/account/login']);
   }
 

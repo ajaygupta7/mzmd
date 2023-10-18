@@ -20,7 +20,7 @@ export class ValidationComponent implements OnInit {
 
   constructor(public formBuilder: UntypedFormBuilder) { }
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   // Form submition
   submit: boolean;

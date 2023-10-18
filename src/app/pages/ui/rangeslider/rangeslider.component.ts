@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Options } from 'ng5-slider';
+import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
   selector: 'app-rangeslider',
@@ -14,7 +14,7 @@ import { Options } from 'ng5-slider';
 export class RangesliderComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   defaultVal = 34;
   option: Options = {

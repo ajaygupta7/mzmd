@@ -16,7 +16,7 @@ import { lineAreaChart, lineBarChart, pieChart, donutChart, radarChart, polarCha
 export class ChartjsComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   // Line Chart
   lineAreaChart: ChartType;

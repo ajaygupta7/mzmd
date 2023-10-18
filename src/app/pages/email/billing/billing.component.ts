@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillingComponent implements OnInit {
 
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 // set the currenr year
 year: number = new Date().getFullYear();
 

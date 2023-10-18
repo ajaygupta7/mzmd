@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
  */
 export class GeneralComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   page = 1;
   pages = 2;

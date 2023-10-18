@@ -12,10 +12,10 @@ import { Component, OnInit } from '@angular/core';
 export class TabsComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   // Collapse declare
-  isCollapsed: boolean;
+  isCollapsed: boolean = false;
 
   constructor() { }
 

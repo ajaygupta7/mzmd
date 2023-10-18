@@ -19,7 +19,7 @@ import {
 export class ApexComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   linewithDataChart: ChartType;
   basicColumChart: ChartType;

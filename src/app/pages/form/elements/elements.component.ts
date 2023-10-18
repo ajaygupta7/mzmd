@@ -14,7 +14,7 @@ import bsCustomFileInput from 'bs-custom-file-input';
 export class ElementsComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

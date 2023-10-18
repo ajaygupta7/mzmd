@@ -18,7 +18,7 @@ export class InboxComponent implements OnInit {
 
   public Editor = ClassicEditor;
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   // paginated email data
   emailData: Array<Email>;

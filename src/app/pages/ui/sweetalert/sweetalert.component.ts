@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 export class SweetalertComponent implements OnInit {
 
   // bread crum items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   constructor() { }
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class SweetalertComponent implements OnInit {
       confirmButtonColor: '#34c38f',
       cancelButtonColor: '#f46a6a',
       confirmButtonText: 'Yes, delete it!'
-    }).then(result => {
+    }).then((result) => {
       if (result.value) {
         Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
       }
@@ -76,7 +76,7 @@ export class SweetalertComponent implements OnInit {
         cancelButtonText: 'No, cancel!',
         showCancelButton: true
       })
-      .then(result => {
+      .then((result) => {
         if (result.value) {
           swalWithBootstrapButtons.fire(
             'Deleted!',
@@ -105,7 +105,7 @@ export class SweetalertComponent implements OnInit {
     });
   }
   timer() {
-    let timerInterval;
+    let timerInterval: any;
     Swal.fire({
       title: 'Auto close alert!',
       html: 'I will close in <strong></strong> seconds.',
@@ -170,7 +170,7 @@ export class SweetalertComponent implements OnInit {
       showLoaderOnConfirm: true,
       confirmButtonColor: '#556ee6',
       cancelButtonColor: '#f46a6a',
-      preConfirm: email => {
+      preConfirm: (email: string) => {
         // eslint-disable-next-line no-unused-vars
         return new Promise<void>((resolve, reject) => {
           setTimeout(() => {
@@ -183,7 +183,7 @@ export class SweetalertComponent implements OnInit {
         });
       },
       allowOutsideClick: false
-    }).then(email => {
+    }).then((email) => {
       Swal.fire({
         title: 'Ajax request finished!',
         html: 'Submitted email: ' + email
@@ -203,7 +203,7 @@ export class SweetalertComponent implements OnInit {
       inputLabel: 'Your IP address',
       inputValue: inputValue,
       showCancelButton: true,
-      inputValidator: (value) => {
+      inputValidator: (value: any) => {
         if (!value) {
           return 'You need to write something!'
         }

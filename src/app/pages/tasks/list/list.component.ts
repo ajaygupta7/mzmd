@@ -18,7 +18,7 @@ import { ChartType, Tasklist } from './list.model';
 export class ListComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   submitted = false;
   formData: UntypedFormGroup;

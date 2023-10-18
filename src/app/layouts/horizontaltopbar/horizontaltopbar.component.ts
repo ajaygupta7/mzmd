@@ -4,14 +4,14 @@ import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 
 import { EventService } from '../../core/services/event.service';
-import { AuthenticationService } from '../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
+// import { AuthenticationService } from '../../core/services/auth.service';
+// import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
 
 import { DOCUMENT } from '@angular/common';
 
 import { MENU } from './menu';
 import { MenuItem } from './menu.model';
-import { environment } from '../../../environments/environment';
+// import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-horizontaltopbar',
@@ -24,13 +24,13 @@ import { environment } from '../../../environments/environment';
  */
 export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
 
-  element;
-  cookieValue;
-  flagvalue;
-  countryName;
-  valueset;
+  element: any;
+  cookieValue!: string;
+  flagvalue: string | string[] | undefined;
+  countryName!: string | string[];
+  valueset!: string;
 
-  menuItems = [];
+  menuItems: any = [];
 
   listLang = [
     { text: 'English', flag: 'assets/images/flags/us.jpg', lang: 'en' },
@@ -41,8 +41,9 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   ];
 
   // tslint:disable-next-line: max-line-length
-  constructor(@Inject(DOCUMENT) private document: any, private router: Router, private eventService: EventService, private authService: AuthenticationService,
-    private authFackservice: AuthfakeauthenticationService,
+  constructor(@Inject(DOCUMENT) private document: any, private router: Router, private eventService: EventService,
+  //  private authService: AuthenticationService,
+  //   private authFackservice: AuthfakeauthenticationService,
     public languageService: LanguageService,
     // tslint:disable-next-line: variable-name
     public _cookiesService: CookieService) {
@@ -79,18 +80,18 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
    * Logout the user
    */
   logout() {
-    if (environment.defaultauth === 'firebase') {
-      this.authService.logout();
-    } else {
-      this.authFackservice.logout();
-    }
+    // if (environment.defaultauth === 'firebase') {
+    //   this.authService.logout();
+    // } else {
+    //   this.authFackservice.logout();
+    // }
     this.router.navigate(['/account/login']);
   }
 
   /**
    * On menu click
    */
-  onMenuClick(event) {
+  onMenuClick(event: any) {
     const nextEl = event.target.nextElementSibling;
     if (nextEl) {
       const parentEl = event.target.parentNode;
@@ -109,7 +110,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   /**
    * remove active and mm-active class
    */
-  _removeAllClass(className) {
+  _removeAllClass(className: string) {
     const els = document.getElementsByClassName(className);
     while (els[0]) {
       els[0].classList.remove(className);
@@ -120,7 +121,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
    * Togglemenu bar
    */
   toggleMenubar() {
-    const element = document.getElementById('topnav-menu-content');
+    const element: any = document.getElementById('topnav-menu-content');
     element.classList.toggle('show');
   }
 
@@ -149,10 +150,9 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
                 parent5.classList.remove('active');
                 const menuelement = document.getElementById("topnav-menu-content")
                 if (menuelement !== null) {
-                  if (menuelement.classList.contains('show'))
-                    document
-                      .getElementById("topnav-menu-content")
-                      .classList.remove("show");
+                  if (menuelement.classList.contains('show')) {
+                    // document.getElementById("topnav-menu-content").classList.remove("show");
+                  }
                 }
               }
             }
@@ -162,7 +162,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     };
 
     // activate menu item based on location
-    const links = document.getElementsByClassName('side-nav-link-ref');
+    const links: any = document.getElementsByClassName('side-nav-link-ref');
     let matchingMenuItem = null;
     // tslint:disable-next-line: prefer-for-of
     for (let i = 0; i < links.length; i++) {

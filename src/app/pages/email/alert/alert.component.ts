@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent implements OnInit {
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 // set the currenr year
 year: number = new Date().getFullYear();
 

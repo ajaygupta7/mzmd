@@ -21,7 +21,7 @@ export class KanbanboardComponent implements OnInit {
   completedTasks: Task[];
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

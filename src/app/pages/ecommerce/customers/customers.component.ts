@@ -18,7 +18,7 @@ import { customersData } from './data';
 export class CustomersComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   formData: UntypedFormGroup;
   submitted = false;
   customersData: Customers[];

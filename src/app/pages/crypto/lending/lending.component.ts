@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LendingComponent implements OnInit {
 
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   constructor() { }
 
   ngOnInit(): void {

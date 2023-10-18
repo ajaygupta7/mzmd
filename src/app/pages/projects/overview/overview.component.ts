@@ -16,7 +16,7 @@ import { ChartType } from './overview.model';
 export class OverviewComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   overviewBarChart: ChartType;
 

@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class OrdersComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   term: any;
 
   transactions;

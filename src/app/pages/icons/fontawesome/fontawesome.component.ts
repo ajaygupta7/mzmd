@@ -13,7 +13,7 @@ import { icons } from './data'
  */
 export class FontawesomeComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   icons;
 

@@ -12,7 +12,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
  */
 export class TimelineComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   timelineCarousel: OwlOptions = {
     items: 1,

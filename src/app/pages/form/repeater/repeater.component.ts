@@ -13,7 +13,7 @@ import { UntypedFormGroup, UntypedFormArray, UntypedFormBuilder } from '@angular
  */
 export class RepeaterComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   form: UntypedFormGroup;
   phoneData: UntypedFormGroup;

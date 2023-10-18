@@ -17,7 +17,7 @@ import { userGridData } from './data';
  */
 export class UsergridComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   userGridData: Usergrid[];
   selected;

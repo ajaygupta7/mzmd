@@ -15,7 +15,7 @@ import { ChartType } from './profile.model';
  */
 export class ProfileComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   revenueBarChart: ChartType;
   statData;

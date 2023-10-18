@@ -13,7 +13,7 @@ import { icons } from './data'
  */
 export class MaterialdesignComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   icons: Array<{}>;
   iconsCount = 0;
   newIconsCount = 0;

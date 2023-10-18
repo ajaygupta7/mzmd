@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UtiliytRoutingModule } from './utility-routing.module';
-import { UIModule } from '../../shared/ui/ui.module';
+// import { UIModule } from '../../shared/ui/ui.module';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -17,7 +17,7 @@ import { PricingComponent } from './pricing/pricing.component';
   imports: [
     CommonModule,
     UtiliytRoutingModule,
-    UIModule,
+    // UIModule,
     NgbNavModule,
     CarouselModule
   ]

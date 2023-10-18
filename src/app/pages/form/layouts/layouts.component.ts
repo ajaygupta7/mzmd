@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutsComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

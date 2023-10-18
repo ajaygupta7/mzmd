@@ -22,7 +22,7 @@ export class GoogleComponent implements OnInit {
   @ViewChild('streetviewPano', { static: true }) streetviewPano: any;
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   constructor(@Inject(PLATFORM_ID) private platformId: any, private mapsAPILoader: MapsAPILoader) { }
 
 

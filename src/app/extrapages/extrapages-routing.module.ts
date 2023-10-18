@@ -5,7 +5,7 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
-import { Login2Component } from '../account/auth/login2/login2.component';
+// import { Login2Component } from '../account/auth/login2/login2.component';
 import { Lockscreen2Component } from './lockscreen2/lockscreen2.component';
 import { ConfirmmailComponent } from './confirmmail/confirmmail.component';
 import { Confirmmail2Component } from './confirmmail2/confirmmail2.component';
@@ -16,6 +16,10 @@ import { Steptwoverification2Component } from './steptwoverification2/steptwover
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 
 const routes: Routes = [
+    // {
+    //     path: '',
+    //     component: MaintenanceComponent
+    // },
     {
         path: 'maintenance',
         component: MaintenanceComponent
@@ -32,10 +36,10 @@ const routes: Routes = [
         path: '500',
         component: Page500Component
     },
-    {
-        path: 'login-2',
-        component: Login2Component
-    },
+    // {
+    //     path: 'login-2',
+    //     component: Login2Component
+    // },
     {
         path: 'lock-screen-1',
         component: LockscreenComponent

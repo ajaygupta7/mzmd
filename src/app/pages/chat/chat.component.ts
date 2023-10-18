@@ -18,7 +18,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
   username = 'Steven Franklin';
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   chatData: ChatUser[];
   chatMessagesData: ChatMessage[];

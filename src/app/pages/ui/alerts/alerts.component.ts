@@ -20,10 +20,10 @@ export class AlertsComponent implements OnInit {
   private _success = new Subject<string>();
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
-  alertData: AlertColor[];
-  alertData2: AlertColor[];
+  alertData: AlertColor[] = [];
+  alertData2: AlertColor[] = [];
 
   constructor() { }
 

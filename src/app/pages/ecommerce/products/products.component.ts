@@ -15,7 +15,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class ProductsComponent implements OnInit {
 
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   pricevalue = 100;
   minVal = 100;
   maxVal = 500;

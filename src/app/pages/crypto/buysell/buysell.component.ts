@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuysellComponent implements OnInit {
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   constructor() { }
 

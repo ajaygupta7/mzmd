@@ -15,9 +15,9 @@ import { pricingData } from './data';
  */
 export class PricingComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
-  pricingData: Pricing[];
+  pricingData!: Pricing[];
 
   constructor() { }
 

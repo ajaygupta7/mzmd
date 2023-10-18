@@ -16,7 +16,7 @@ import { InvoiceList } from './list.model';
 export class ListComponent implements OnInit {
 
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   listData: InvoiceList[];
 

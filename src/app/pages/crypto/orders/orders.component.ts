@@ -18,7 +18,7 @@ import { ordersData } from './data'
 })
 export class OrdersComponent implements OnInit {
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
 
   ordersData: Orders[];
 

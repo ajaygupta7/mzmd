@@ -18,7 +18,7 @@ import { OveviewChart, activitiesData } from './data';
 export class WalletComponent implements OnInit {
 
   // breadcrumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   OveviewChart: ChartType;
 
   activitiesData: Activities[];

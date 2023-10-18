@@ -13,7 +13,7 @@ import { NgbDate, NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap'
  */
 export class AdvancedformComponent implements OnInit {
   // bread crumb items
-  breadCrumbItems: Array<{}>;
+  breadCrumbItems!: Array<{}>;
   constructor(private calendar: NgbCalendar) { }
 
   // Component colorpicker
