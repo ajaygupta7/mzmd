@@ -1,8 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { LanguageService } from 'src/app/core/services/language.service';
 
+const yourHeader: HttpHeaders = new HttpHeaders({
+  Authorization: 'Bearer fake-jwt-token'
+});
+
+const headerDict = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Access-Control-Allow-Headers': 'Content-Type',
+}
+
+const requestOptions = {                                                                                                                                                                                 
+  headers: new HttpHeaders(headerDict), 
+};
 
 @Component({
   selector: 'app-macro',
@@ -10,6 +23,7 @@ import { LanguageService } from 'src/app/core/services/language.service';
   styleUrls: ['./macro.component.scss']
 })
 export class MacroComponent implements OnInit {
+  
   // bread crumb items
   breadCrumbItems!: Array<{}>;
   APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';

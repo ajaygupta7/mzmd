@@ -73,7 +73,7 @@ export class DefaultComponent implements OnInit {
   }
 
   openModal() {
-    this.modalService.open(this.content, { centered: true });
+    // this.modalService.open(this.content, { centered: true });
   }
 
   weeklyreport() {

@@ -17,7 +17,8 @@ import { VerticalComponent } from './vertical/vertical.component';
 import { HorizontaltopbarComponent } from './horizontaltopbar/horizontaltopbar.component';
 import { LanguageService } from '../core/services/language.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgxSliderModule } from '@angular-slider/ngx-slider';
+// import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgxSliderModule } from 'ngx-slider-v2';
 // import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
@@ -39,11 +40,11 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     RouterModule,
     // Ng5SliderModule,
     // NgxSliderModule,
-    // NgbDropdownModule,
+    NgbDropdownModule,
     // ClickOutsideModule,
     // UIModule,
     SimplebarAngularModule,
-    // NgxSliderModule
+    NgxSliderModule
   ],
   providers: [LanguageService]
 })
