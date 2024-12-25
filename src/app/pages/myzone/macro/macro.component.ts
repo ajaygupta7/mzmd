@@ -26,7 +26,8 @@ export class MacroComponent implements OnInit {
   
   // bread crumb items
   breadCrumbItems!: Array<{}>;
-  APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';
+  APIBasicPath: string = 'https://trigger.macrodroid.com/f7da250a-0121-42dd-ac51-2e6e5ad80e22/mzmd-basic';
+  // APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';
   APIAdvancePath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-advance';
 
   constructor(private http: HttpClient, public languageService: LanguageService) { }
