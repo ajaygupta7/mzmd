@@ -44,7 +44,7 @@ export class MacroComponent implements OnInit {
       let URL = this.APIBasicPath + '?id='+id;
       this.http.get(URL, {responseType: 'text'}).subscribe(data => {
         console.log("Success: ", data);
-        alert("Success: "+ data);
+        // alert("Success: "+ data);
       })
     }, (this.languageService.delayTimer*1000));
   }
@@ -71,11 +71,12 @@ export class MacroComponent implements OnInit {
       inputPlaceholder: 'Select your choice',
       inputValue: inputValue,
       showCancelButton: true,
-      inputValidator: (value) => {
-        if (!value) {
-          return 'You need to Select something!'
-        }
-      }
+      // inputValidator: value => !value && 'You need to select something!',
+      // inputValidator: (value) => {
+      //   if (!value) {
+      //     return 'You need to Select something!'
+      //   }
+      // }
     });
 
     if (ipAddress) {
@@ -96,11 +97,11 @@ export class MacroComponent implements OnInit {
       input: 'range',
       // inputLabel: 'Your Message',
       showCancelButton: true,
-      inputValidator: (value) => {
-        if (!value) {
-          return 'You need to write something!'
-        }
-      }
+      // inputValidator: (value) => {
+      //   if (!value) {
+      //     return 'You need to write something!'
+      //   }
+      // }
     });
 
     if (ipAddress) {
@@ -129,16 +130,16 @@ export class MacroComponent implements OnInit {
       ]
     },
       showCancelButton: true,
-      inputValidator: (value) => {
-        if (!value) {
-          return 'You need to write something!'
-        }
-      }
+      // inputValidator: (value) => {
+      //   if (!value) {
+      //     return 'You need to write something!'
+      //   }
+      // }
     });
 
     if (ipAddress) {
       // Swal.fire(`Your IP address is ${ipAddress}`)
-      this.callWithParams(id, ipAddress);
+      this.callWithParams(id, ipAddress.toString());
     }
   }
 
@@ -153,11 +154,11 @@ export class MacroComponent implements OnInit {
       input: 'text',
       inputLabel: 'Your Message',
       showCancelButton: true,
-      inputValidator: (value) => {
-        if (!value) {
-          return 'You need to write something!'
-        }
-      }
+      // inputValidator: (value) => {
+      //   if (!value) {
+      //     return 'You need to write something!'
+      //   }
+      // }
     });
 
     if (ipAddress) {

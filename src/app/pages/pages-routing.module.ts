@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import { CalendarComponent } from './calendar/calendar.component';
 // import { ChatComponent } from './chat/chat.component';
-import { DefaultComponent } from './dashboards/default/default.component';
+// import { DefaultComponent } from './dashboards/default/default.component';
 // import { FilemanagerComponent } from './filemanager/filemanager.component';
 import { MacroComponent } from './myzone/macro/macro.component';
 
@@ -11,11 +11,11 @@ const routes: Routes = [
   { path: '', redirectTo: 'my-zone', pathMatch: 'full'},
 
   { path: 'my-zone', component: MacroComponent },
-  { path: 'dashboard', component: DefaultComponent },
+  // { path: 'dashboard', component: DefaultComponent },
   // { path: 'calendar', component: CalendarComponent },
   // { path: 'chat', component: ChatComponent },
   // { path: 'filemanager', component: FilemanagerComponent },
-  { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule) },
+  // { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule) },
   // { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
   // { path: 'crypto', loadChildren: () => import('./crypto/crypto.module').then(m => m.CryptoModule) },
   // { path: 'email', loadChildren: () => import('./email/email.module').then(m => m.EmailModule) },

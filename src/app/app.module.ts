@@ -8,7 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExtrapagesModule } from './extrapages/extrapages.module';
+// import { ExtrapagesModule } from './extrapages/extrapages.module';
 import { LayoutsModule } from './layouts/layouts.module';
 // import { ExtrapagesModule } from './extrapages/extrapages.module';
 // import { LayoutsModule } from './layouts/layouts.module';
@@ -54,7 +54,7 @@ export function createTranslateLoader(http: HttpClient): any {
       }
     }),
     LayoutsModule,
-    ExtrapagesModule,
+    // ExtrapagesModule,
     PagesModule,
     NgbAccordionModule,
     NgbNavModule,

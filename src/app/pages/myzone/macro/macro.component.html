@@ -11,19 +11,22 @@
                     <h5>Device</h5>
                     <div class="row icon-demo-content">
                         <div tappable (click)="getCall('blockTouch')" class="col-xl-3 col-lg-4 col-sm-6 btn btn-outline">
-                            <i class="bx bx-shield-quarter"></i> Block Touch1
+                            <i class="bx bx-shield-quarter"></i> Block Touch
                         </div>
                         <div tappable (click)="getCall('battery')" class="col-xl-3 col-lg-4 col-sm-6 btn btn-outline">
-                            <i class="bx bxs-battery-low"></i> Battery Status-abba
+                            <i class="bx bxs-battery-low"></i> Battery Status
                         </div>
                         <div (click)="getCall('silent')" class="col-xl-3 col-lg-4 col-sm-6 btn btn-outline">
                             <i class="bx bx-volume-mute"></i> Silent
                         </div>
-                        <div tappable (click)="getCall('allDown')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <div tappable (click)="getCall('home')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-home"></i> Minimise
                         </div>
                         <div (click)="getCall('allApps')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-customize"></i> Show Apps
+                        </div>
+                        <div (click)="getCall('recent')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-carousel"></i> Recent Apps
                         </div>
                         <div (click)="getCall('fakeLock')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-fingerprint"></i> Fingerprint Lock
@@ -31,7 +34,7 @@
                         <div (click)="getCall('powerOff')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-power-off"></i> Power Off
                         </div>
-                        <div (click)="getCall('goBack')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <div (click)="getCall('back')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-arrow-back"></i> Back
                         </div>
                         <div (click)="getCall('vibrate')" class="col-xl-3 col-lg-4 col-sm-6">
@@ -49,15 +52,18 @@
                         <div (click)="getCall('screenOff')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-lock-alt"></i> Screen Off
                         </div>
-                        <div (click)="getCall('hotSpot')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <div (click)="getCall('deviceLock')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-lock-alt"></i> Device Lock
+                        </div>
+                        <!-- <div (click)="getCall('hotSpot')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-broadcast"></i> Hotspot Toggle
-                        </div>
-                        <div (click)="getCall('bluetooth')" class="col-xl-3 col-lg-4 col-sm-6">
+                        </div> -->
+                        <!-- <div (click)="getCall('bluetooth')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-bluetooth"></i> Bluetooth Toggle
-                        </div>
-                        <div (click)="getCall('wifi')" class="col-xl-3 col-lg-4 col-sm-6">
+                        </div> -->
+                        <!-- <div (click)="getCall('wifi')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-wifi"></i> Wifi Toggle
-                        </div>
+                        </div> -->
                         <div (click)="getCall('screenshot')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-screenshot"></i> Screenshot
                         </div>
@@ -82,6 +88,21 @@
                         </div>
                         <div (click)="getCall('prankToasts')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-volume-mute"></i> Prank Adds
+                        </div>
+                        <div (click)="getCall('speakerCall')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Call Speaker
+                        </div>
+                        <div (click)="getCall('edgeShow')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Show Edge
+                        </div>
+                        <div (click)="getCall('fireworks')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Fireworks
+                        </div>
+                        <div (click)="getCall('recording')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Recording
+                        </div>
+                        <div (click)="getCall('blackScreen')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Black Out
                         </div>
                     </div>
                 </div>

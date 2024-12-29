@@ -16,7 +16,7 @@ import bootstrapPlugin from "@fullcalendar/bootstrap5";
 
 import { PagesRoutingModule } from './pages-routing.module';
 
-import { DashboardsModule } from './dashboards/dashboards.module';
+// import { DashboardsModule } from './dashboards/dashboards.module';
 // import { EcommerceModule } from './ecommerce/ecommerce.module';
 // import { CryptoModule } from './crypto/crypto.module';
 // import { EmailModule } from './email/email.module';
@@ -25,7 +25,7 @@ import { DashboardsModule } from './dashboards/dashboards.module';
 // import { TasksModule } from './tasks/tasks.module';
 // import { ContactsModule } from './contacts/contacts.module';
 // import { BlogModule } from "./blog/blog.module";
-import { UtilityModule } from './utility/utility.module';
+// import { UtilityModule } from './utility/utility.module';
 // import { UiModule } from './ui/ui.module';
 // import { FormModule } from './form/form.module';
 // import { TablesModule } from './tables/tables.module';
@@ -60,7 +60,7 @@ import { MacroComponent } from './myzone/macro/macro.component';
     PagesRoutingModule,
     // NgApexchartsModule,
     ReactiveFormsModule,
-    DashboardsModule,
+    // DashboardsModule,
     // CryptoModule,
     // EcommerceModule,
     // EmailModule,
@@ -71,7 +71,7 @@ import { MacroComponent } from './myzone/macro/macro.component';
     // TasksModule,
     // ContactsModule,
     // BlogModule,
-    UtilityModule,
+    // UtilityModule,
     // UiModule,
     // FormModule,
     // TablesModule,
