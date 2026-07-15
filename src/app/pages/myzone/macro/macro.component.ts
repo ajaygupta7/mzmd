@@ -27,8 +27,8 @@ export class MacroComponent implements OnInit {
   // bread crumb items
   breadCrumbItems!: Array<{}>;
   APIBasicPath: string = 'https://trigger.macrodroid.com/f7da250a-0121-42dd-ac51-2e6e5ad80e22/mzmd-basic';
-  // APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic';
-  APIAdvancePath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-advance';
+  // APIBasicPath: string = 'https://trigger.macrodroid.com/69b39d25-9389-4186-b365-ba82fc441788/mzmd-basic'; // OLD webhoook
+  APIAdvancePath: string = 'https://trigger.macrodroid.com/f7da250a-0121-42dd-ac51-2e6e5ad80e22/mzmd-advance';
 
   constructor(private http: HttpClient, public languageService: LanguageService) { }
 
@@ -54,29 +54,29 @@ export class MacroComponent implements OnInit {
 
   // Dropdown Selectors
   async dropdownSwal(id: string) {
-    const ipAPI = '//api.ipify.org?format=json'
-    const inputValue = fetch(ipAPI)
-      .then(response => response.json())
-      .then(data => data.ip)
+    // const ipAPI = '//api.ipify.org?format=json'
+    // const inputValue = fetch(ipAPI)
+    //   .then(response => response.json())
+    //   .then(data => data.ip)
 
     let inputOptions = {};
-    if(id == 'openApp') inputOptions = {'com.whatsapp': 'WhatsApp', 'com.ril.ajio': 'Ajio'};
+    if(id == 'openApp') inputOptions = {'com.whatsapp': 'WhatsApp', 'com.ril.ajio': 'Ajio', 'com.oplus.camera': 'Camera', 'com.coloros.calculator': 'Calculator', 'cris.icms.ntes': 'NTES', 'com.unicostudio.braintest4': 'Brain Test 4'};
     if(id == 'playAudio') inputOptions = {'1':'Whistle', '2':'F88k Off'};
 
     const { value: ipAddress } = await Swal.fire({
-      title: 'Select Your choice',
+      title: 'Select Your Choice',
       input: 'select',
       inputOptions: inputOptions,
       // inputLabel: '',
       inputPlaceholder: 'Select your choice',
-      inputValue: inputValue,
+      // inputValue: inputValue,
       showCancelButton: true,
-      // inputValidator: value => !value && 'You need to select something!',
-      // inputValidator: (value) => {
-      //   if (!value) {
-      //     return 'You need to Select something!'
-      //   }
-      // }
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to Select something!'
+        }
+        return null;
+      }
     });
 
     if (ipAddress) {
@@ -97,11 +97,12 @@ export class MacroComponent implements OnInit {
       input: 'range',
       // inputLabel: 'Your Message',
       showCancelButton: true,
-      // inputValidator: (value) => {
-      //   if (!value) {
-      //     return 'You need to write something!'
-      //   }
-      // }
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
+        }
+        return value;
+      }
     });
 
     if (ipAddress) {
@@ -116,7 +117,7 @@ export class MacroComponent implements OnInit {
       .then(response => response.json())
       .then(data => data.ip)
 
-    const { value: ipAddress } = await Swal.fire({
+    const { value: ipAddress, value: ipAddress1  } = await Swal.fire({
       title: 'Enter Your Value',
       html:
       '<input id="swal-input1" autofocus="true" style="width:80%" type="number" min="1000000000" max="9999999999" class="swal2-input" placeholder="Enter 10 digit Number">' +
@@ -130,35 +131,37 @@ export class MacroComponent implements OnInit {
       ]
     },
       showCancelButton: true,
-      // inputValidator: (value) => {
-      //   if (!value) {
-      //     return 'You need to write something!'
-      //   }
-      // }
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
+        }
+        return value;
+      }
     });
 
     if (ipAddress) {
       // Swal.fire(`Your IP address is ${ipAddress}`)
-      this.callWithParams(id, ipAddress.toString());
+      this.callWithParams(id, ipAddress.toString(), Number(ipAddress1));
     }
   }
 
   async textSwal(id: any) {
-    const ipAPI = '//api.ipify.org?format=json'
-    const inputValue = fetch(ipAPI)
-      .then(response => response.json())
-      .then(data => data.ip)
+    // const ipAPI = '//api.ipify.org?format=json'
+    // const inputValue = fetch(ipAPI)
+    //   .then(response => response.json())
+    //   .then(data => data.ip)
 
     const { value: ipAddress } = await Swal.fire({
       title: 'Enter Your Value',
       input: 'text',
       inputLabel: 'Your Message',
       showCancelButton: true,
-      // inputValidator: (value) => {
-      //   if (!value) {
-      //     return 'You need to write something!'
-      //   }
-      // }
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
+        }
+        return null;
+      }
     });
 
     if (ipAddress) {
@@ -168,6 +171,7 @@ export class MacroComponent implements OnInit {
   }
 
   callWithParams(id: string, str1: string, int1?: string | number | undefined, bool1?: string | undefined) {
+    console.log(id, str1, int1, bool1);
     setTimeout(() => {
       console.log("Delayed for "+this.languageService.delayTimer+" second.");
       console.log(id, str1, int1, bool1);

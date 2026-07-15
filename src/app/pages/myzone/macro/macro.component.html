@@ -43,8 +43,11 @@
                         <div (click)="getCall('voiceSearch')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-microphone"></i> Google Voice
                         </div>
-                        <div (click)="getCall('notificationBar')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-notification"></i> Show Notifications
+                        <div (click)="getCall('expandNotificationBar')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-expand"></i> Show Notifications
+                        </div>
+                        <div (click)="getCall('collapseNotificationBar')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-collapse"></i> Hide Notifications
                         </div>
                         <div (click)="getCall('toggleTourch')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-bulb"></i> Toggle Tourch
@@ -86,23 +89,38 @@
                         <div (click)="getCall('endCall')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-phone"></i> End Call
                         </div>
-                        <div (click)="getCall('prankToasts')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <!-- <div (click)="getCall('prankToasts')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-volume-mute"></i> Prank Adds
-                        </div>
+                        </div> -->
                         <div (click)="getCall('speakerCall')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-volume-mute"></i> Call Speaker
+                            <i class="bx bx-phone-call"></i> Call Speaker
                         </div>
                         <div (click)="getCall('edgeShow')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-volume-mute"></i> Show Edge
+                            <i class="bx bx-mobile-alt"></i> Show Edge
                         </div>
                         <div (click)="getCall('fireworks')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-volume-mute"></i> Fireworks
+                            <i class="bx bx-certification"></i> Fireworks
                         </div>
                         <div (click)="getCall('recording')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-volume-mute"></i> Recording
+                            <i class="bx bx-microphone"></i> Recording
                         </div>
                         <div (click)="getCall('blackScreen')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bx-volume-mute"></i> Black Out
+                            <i class="bx bxs-mobile"></i> Black Out
+                        </div>
+                        <div (click)="getCall('batteryDialogue')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bxs-battery-low"></i> Battery Low
+                        </div>
+                        <div (click)="getCall('sendNotification')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-notification"></i> Send Notification
+                        </div>
+                        <div (click)="getCall('dimmerOff')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-sun"></i> High Light
+                        </div>
+                        <div (click)="getCall('dimmerOn')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-moon"></i> Low Light
+                        </div>
+                        <div (click)="getCall('screenBlink')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-volume-mute"></i> Blinking Screen
                         </div>
                     </div>
                 </div>
@@ -116,15 +134,18 @@
                 <div class="card-body">
                     <h5>Advanced</h5>
                     <div class="row icon-demo-content">
-                        <div (click)="textSwal('ajay')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <div (click)="textSwal('dialogueBox')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-conversation"></i> Alerts Messages
+                        </div>
+                        <div (click)="textSwal('toast')" class="col-xl-3 col-lg-4 col-sm-6">
+                            <i class="bx bx-conversation"></i> Toast
                         </div>
                         <div (click)="dropdownSwal('openApp')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-list-ul"></i> Open Specific App
                         </div>
-                        <div (click)="dropdownSwal('playAudio')" class="col-xl-3 col-lg-4 col-sm-6">
+                        <!-- <div (click)="dropdownSwal('playAudio')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bxs-playlist"></i> Play Song
-                        </div>
+                        </div> -->
                         <div (click)="rangeSwal('brightness')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bx-brightness-half"></i> Brightness
                         </div>
@@ -135,7 +156,7 @@
                             <i class="bx bxs-phone-outgoing"></i> Phone Call
                         </div>
                         <div (click)="textSwal('speak')" class="col-xl-3 col-lg-4 col-sm-6">
-                            <i class="bx bxs-phone-outgoing"></i> Speak Text
+                            <i class="bx bx-user-voice"></i> Speak Text
                         </div>
                         <div (click)="text2XSwal('sendSms')" class="col-xl-3 col-lg-4 col-sm-6">
                             <i class="bx bxs-chat"></i> Send Message
